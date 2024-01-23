@@ -26,10 +26,12 @@
 /* GENERAL */
 
 body {
-text-align: center;
+	text-align: center;
 	color:#3c3c3c;
 	font-size: 16px;
 	font-family: HelveticaNeueLT-Medium;
+	max-width: 1200px;
+	justify-content: center;
 }
 
 img {
@@ -41,49 +43,30 @@ img {
 
 header {
 	position: sticky;
-	background-color: #fff;
-	width: 100%;
-	padding: 15px;
 	display: flex;
 	flex-wrap: wrap;
-	flex-direction: row;
-	justify-content: space-between;
+	width: 100%;
+	justify-content: center;
 	align-items: center;
 }
 
-.logo {
+.bg-body-tertiary {
+    --bs-bg-opacity: 0;
+}
+
+.navbar-brand {
+	justify-content: center;
+	align-items: center;
 	width: 200px;
-	height: auto;
 }
 
-header nav ul {
-	display: flex;
-	column-gap: 15px;
-}
-
-header nav ul li {
-	color:#3c3c3c;
-	text-decoration: none;
-	padding: 10px;
+nav ul li {
 	transition-duration: 500ms;
 }
 
-header nav ul li a {
-	font-family: HelveticaNeueLT-Bold;	
-}
-
-header nav ul li:hover {
+nav ul li:hover, nav ul li:active {
 	background-color: #ffff00;
 	border-radius: 5px;
-}
-
-header nav ul li:active {
-	color:#ffff00;
-	background-color: #3c3c3c;
-}
-
-header nav ul li a:visited {
-	color:#3c3c3c;
 }
 
 /* FOOTER */
@@ -93,30 +76,34 @@ footer {
 	color:#ffff00;
 	height: auto;
 	width: 100%;
-border-style: solid;
-	text-align: left;
+	border-style: solid;
 	margin-top: 10px;
 	padding: 30px;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	align-items: center;
 }
 
-footer p {
-	font-size: .75em;
-	color: #ffff00;
-	width: 300px;
-	margin-bottom: 20px;
+.RedesSociales {
+	width: 100%;
 }
 
 .RedesSociales div {
-	width: 300px;
-	margin-bottom: 20px;
+	/* margin-bottom: 10px; */
+	display: inline-flex;
+	width: 30%;
+	padding: 10px;
 }
 
 .RedesSociales div a {
 	font-size: .75em;
 	color: #ffff00;
 	transition-duration: 500ms;
-	padding: 10px;
+	/* padding: 15px; */
 	font-family: HelveticaNeueLT-Bold;	
+	text-transform: uppercase;
+	text-decoration: none;
 }
 
 .RedesSociales div a:hover {
@@ -125,9 +112,14 @@ footer p {
 	border-radius: 5px;	
 }
 
-.derechos p {
+.RedesSociales div a img {
+	width: 30px;
+}
+
+.derechos {
 	width: 100%;
 	text-align: center;
+	font-size: .75em;
 }
 
 /* CONTENIDO */
@@ -153,7 +145,7 @@ h2 {
 h3 {
 	font-size: 1em;
 	text-align: left;
-	margin-bottom: 20px;
+	margin-bottom: 10px;
 	display: inline-block;
 	color:#ffff00;
 	font-family: HelveticaNeueLT-Bold;
@@ -161,6 +153,8 @@ h3 {
 
 h4 {
 	font-size: .8em;
+	font-weight: bold;
+	margin-bottom: 5px;
 }
 
 /* SECCIONES */
@@ -196,7 +190,6 @@ h4 {
 .ProyTag {
 	position: absolute;
 	bottom: 0px;
-	align-items: end;
 	background-color: #ffff00;
 	z-index: 1px;
 	width: 100%;
@@ -262,7 +255,6 @@ h4 {
 	grid-column: span 1;
 }
 
-
 .banner {
 	background-color: #ffff00;
 	padding: 10px;
@@ -289,8 +281,6 @@ h4 {
 	width: 300px;
 	display: inline-block;
 }
-
-
 
 .pasos {
 	width: 100%;
@@ -356,4 +346,63 @@ input[type="submit"], input[type="reset"] {
 input[type="submit"]:hover, input[type="reset"]:hover {
 	background-color: #ffff00;
 	color:#3c3c3c;
+}
+
+
+/* MEDIAQUERYS */
+
+/* DESKTOP */
+@media screen and (max-width: 1024px) {
+
+	body {
+		display: inline-block;
+	}
+
+	/* FOOTER */
+	footer, .RedesSociales {
+		align-items: center;
+	}
+
+	.RedesSociales div {
+		display: inline-block;
+		width: 100%;
+	
+	}
+
+}
+
+/* TABLET */
+@media screen and (max-width: 1023px) and (min-width: 769px)  {
+
+	/* GRID RESPONSIVE */
+	.proyectos-grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.home {
+		grid-template-rows: repeat(3, 1fr);
+	}
+
+	.proye {
+		grid-template-rows: repeat(6, 1fr);
+	}
+
+	.img1, .img2, .img3, .img4, .img5, .img6, .img7, .img8, .img9, .img10, .img11, .img12 {
+		grid-row: span 1;
+		grid-column: span 1;
+	} 
+
+}
+
+/* MOBILE */
+@media screen and (max-width: 768px) {
+
+	/* GRID RESPONSIVE */
+	.proyectos-grid {
+		display: inline-block;
+	}
+
+	.ProyMin {
+		margin-bottom: 10px;
+	}
 }
