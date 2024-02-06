@@ -1,0 +1,36 @@
+/* BANNER INDEX SLIDE IMAGENES*/
+.banner{
+	margin-bottom: 10px;
+	.sele1{
+		.carousel-indicators [data-bs-target] {
+			background-color: $color-pri;	
+		}
+		.formato-carousel{
+			height: 300px;
+			justify-content: center;
+			align-items: center;
+			.elemento{
+				img{
+				height: 300px;
+				object-fit: cover;
+				}
+				.carousel-tag{
+					display: inline-block;
+					width: fit-content;
+					height: 150px;
+					text-align: left;
+					top: 15px;
+					left: 15px;
+					color: $color-sec;
+					background-color: $color-pri;
+					padding: 10px;
+				}
+			}
+		}
+	}
+}
+
+/* PROYECTOS MINIATURA */
+.home{
+	grid-template-rows: repeat(2, 200px);
+}

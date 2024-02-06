@@ -1,0 +1,30 @@
+/* MODELADO3D E IMPRESION3D */
+.modelado{
+	@extend %flexwrap;
+	padding-left: 10px;
+	padding-right: 10px;
+	.pasos{
+		width: 33%;
+		height: auto;
+		border-style: solid;
+		border-color: $color-sec;
+		border-width: 1px;
+		border-radius: 5px;
+		padding-left: 15px;
+		padding-right: 15px;
+		transition-duration: 500ms;
+		.ImgModelado{
+			width: 100%;
+			height: auto;
+		}
+		div{
+			h3{
+			background-color: $color-sec;
+			padding: 10px;
+			border-radius: 5px;
+			display: block;
+			text-transform: uppercase;
+			}
+		}
+	}
+}

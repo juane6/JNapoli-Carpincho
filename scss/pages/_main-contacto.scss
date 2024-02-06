@@ -1,0 +1,47 @@
+/* CONTACTO. Formularios */
+
+.img-formulario{
+	display: inline-block;
+	text-align: left;
+	width: 50%;
+	object-fit: cover;
+	vertical-align: top;
+	img{
+		height: 430px;
+		object-fit: cover;
+	}
+}
+
+.formulario{
+	display: inline-block;
+	width: 45%;
+	form{
+		input{
+			display: block;
+			text-align: left;
+			margin: 10px;
+			width: 300px;
+		}
+		input[type="submit"]{
+			background-color: $color-sec;
+			border-radius: 5px;
+			padding: 5px;
+			font-weight: bold;
+			color: $color-pri;
+			transition-duration: 500ms;
+			&:hover{
+				background-color: $color-pri;
+				color: $color-sec;
+			}
+		}
+		input[type="reset"]{
+			@extend %form-input-submit;
+		}
+		label{
+			@extend %form-input;
+		}
+		select{
+			@extend %form-input;
+		}
+	}
+}

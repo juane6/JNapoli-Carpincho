@@ -1,0 +1,37 @@
+header{
+	@extend %flexwrap;
+    position: sticky;
+	align-items: center;
+    nav{
+        ul{
+            li{
+                transition-duration: 500ms;
+                &:hover{
+                    background-color: $color-pri;
+                    border-radius: 5px;
+                }
+                &:active{
+                    background-color: $color-pri;
+                    border-radius: 5px;
+                    font-weight: 900;
+                }
+                .active{
+                    background-color: $color-pri;
+                    border-radius: 5px;
+                    font-weight: 900;
+                }
+            }
+        }
+    }
+}
+
+.bg-body-tertiary {
+    --bs-bg-opacity: 0;
+}
+
+.navbar-brand {
+	justify-content: center;
+	align-items: center;
+	width: 200px;
+}
+

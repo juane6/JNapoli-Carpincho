@@ -1,0 +1,129 @@
+/* MEDIAQUERYS */
+
+/* DESKTOP */
+@media screen and (max-width: 1024px){
+
+	/* FOOTER */
+	footer{
+		align-items: center;
+	}
+
+	.RedesSociales{
+        align-items: center;
+        div{
+            display: inline-block;
+            width: 100%;
+        }
+    }
+}
+
+/* TABLET */
+@media screen and (max-width: 1023px) and (min-width: 769px){
+
+	/* GRID RESPONSIVE */
+	.proyectos-grid{
+		grid-template-columns: repeat(2, 1fr);
+        .img1, .img2, .img3, .img4, .img5, .img6, .img7, .img8, .img9, .img10, .img11, .img12 {
+            grid-row: span 1;
+            grid-column: span 1;
+        }
+	}
+
+	.home{
+        grid-template-rows: repeat(3, 1fr);
+	}
+
+	.proye{
+		grid-template-rows: repeat(6, 1fr);
+	}
+    
+    /* IMPRESION 3D */
+	.material{
+		width: 40%;
+	}
+
+	/* MODELADO 3D */
+
+}
+
+/* MOBILE */
+@media screen and (max-width: 768px) {
+
+	h1 {
+		font-size: 1.5em;
+	}
+
+	/* CAROUSEL */	
+	
+	.carousel-tag {
+		display: block;
+		top: 10px;
+		left: 10px;
+	}
+
+	.d-none {
+		display: block!important;
+	}
+
+	/* BANNERS PAG SECUNDARIAS IMAGEN FIJA */
+	.banner-sec{
+		.BannerTag{
+			position: static;
+			display: block;
+			width: 100%;
+		}
+	}
+
+	/* GRID RESPONSIVE */
+	.proyectos-grid {
+		display: inline-block;
+	}
+
+	.ProyMin {
+		margin-bottom: 10px;
+	}
+
+	.materiales {
+		display: block;
+		width: 100%;
+		.material {
+			width: 100%;
+		}
+	}
+
+	
+
+	/* MODELADO3D */
+
+	.modelado{
+		display: block;
+		.pasos{
+		width: 100%;
+		}
+	}
+
+	/* FORMULARIO RESPONSIVE */
+
+    .img-formulario {
+		display: block;
+		width: 100%;
+        img{
+            height: 300px;
+            object-fit: cover;
+        }
+	}
+
+	.formulario {
+		display: block;
+		width: 100%;
+	}
+	
+	input, label, select {
+		margin-right: 10px;
+		width: 90%;
+	}
+
+}
+
+
+

@@ -1,0 +1,182 @@
+// GLOBALS
+
+/* GENERAL */
+body{
+	margin: 0 auto;
+	text-align: center;
+	color: $color-sec;
+	font-size: 16px;
+	font-family: HelveticaNeueLT-Medium;
+	max-width: 1200px;
+}
+
+img{
+	width: 100%;
+	border-radius: 5px;
+}
+
+/* TITULARES */
+h1{
+	font-family: HelveticaNeueLT-Bold;
+	font-size: 2em;
+	text-align: left;
+	text-transform: uppercase;
+	border-bottom: .5px solid $color-sec;
+	display: block;
+	padding-left: 10px;
+}
+
+h2 {
+	font-size: 1.6em;
+	text-align: left;
+	text-transform: uppercase;
+	margin: 10px;
+	font-family: HelveticaNeueLT-Bold;
+	margin-top: 30px;
+	border-bottom: .5px solid $color-sec;
+}
+
+h3{
+	font-size: 1em;
+	text-align: left;
+	margin-bottom: 10px;
+	display: inline-block;
+	color: $color-pri;
+	font-family: HelveticaNeueLT-Bold;
+}
+
+h4{
+	font-size: .8em;
+	font-family: HelveticaNeueLT-Bold;
+	margin-bottom: 5px;
+	text-align: left;
+}
+
+h5{
+	font-size: 2em;
+	text-align: left;
+	margin-bottom: 10px;
+	display: inline-block;
+	font-family: HelveticaNeueLT-Bold;
+	border-bottom: .5px solid $color-sec;
+}
+
+p{
+	text-align: left;
+}
+
+/* BANNERS PAG SECUNDARIAS IMAGEN FIJA */
+
+.banner-sec{
+	display: block;
+	margin-bottom: 10px;
+	width: 100%;
+	object-fit: cover;
+	position: relative;
+	img{
+		height: 300px;
+		object-fit: cover;
+	}
+	.BannerTag{
+		position: absolute;
+		display: inline-block;
+		height: fit-content;
+		width: fit-content;
+		top: 15px;
+		text-align: left;
+		color: $color-sec;
+		left: 15px;
+		padding: 10px;
+		background-color: $color-pri;
+		
+	}
+}
+
+/* GRID INDEX Y PROYECTOS */
+.proyectos-grid{
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+	div{
+		img{
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+	.ProyMin{
+		/* border-radius: 40px; */
+		transition: 500ms;
+		position: relative;
+		&:hover{
+			box-shadow: 5px 5px 15px rgb(176, 176, 176);	
+		}
+		.ProyTag{
+			position: absolute;
+			bottom: 0px;
+			background-color: $color-pri;
+			z-index: 1px;
+			width: 100%;
+			padding: 10px;
+			height: 50px;
+			h4{
+				border-bottom: .5px solid $color-sec;	
+			}
+			.ProyTagText{
+				font-size: .65em;
+			}
+		}
+	}
+	.img1{
+		grid-row: span 2;
+	}
+	
+	.img2{
+		grid-row: span 1;
+	}
+	
+	.img3{
+		grid-column: span 2;
+	}
+	
+	.img4{
+		grid-column: span 1;
+		grid-row: span 1;
+	}
+	
+	.img5{
+		grid-row: span 1;
+	}
+	
+	.img6{
+		grid-column: span 1;
+	}
+	
+	.img7{
+		grid-column: span 2;
+	}
+	
+	.img8{
+		grid-row: span 2;
+	}
+	
+	.img9{
+		grid-row: span 1;
+	}
+	
+	.img10{
+		grid-row: span 1;
+	}
+	
+	.img11{
+		grid-column: span 1;
+	}
+	
+	.img12{
+		grid-column: span 1;
+	}
+}
+

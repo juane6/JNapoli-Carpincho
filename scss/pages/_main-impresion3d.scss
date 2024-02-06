@@ -1,0 +1,26 @@
+/* IMPRESION 3D */
+
+.materiales{
+	@extend %flexwrap;  
+    padding-left: 10px;
+	padding-right: 10px;
+    .material{
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 33%;
+        transition-duration: 500ms;
+        padding: 10px;
+        font-size: .8em;
+        margin-top: 5px;
+        border-radius: 5px;
+        background-color: #eeeeee;
+        &:hover{
+            box-shadow: 5px 5px 15px rgb(176, 176, 176);
+        }
+        .ImgImpresion{
+            width: 100%;
+            height: auto;
+            display: inline-block;
+        }
+    }
+}

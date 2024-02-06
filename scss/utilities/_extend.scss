@@ -1,0 +1,27 @@
+%flexwrap{
+    display: flex;
+	justify-content: center;
+	column-gap: 10px;
+    width: 100%;
+    align-items: top;  
+}
+
+%form-input{
+    display: block;
+    text-align: left;
+    margin: 10px;
+    width: 300px;
+}
+
+%form-input-submit{
+    background-color: $color-sec;
+    border-radius: 5px;
+    padding: 5px;
+    font-weight: bold;
+    color: $color-pri;
+    transition-duration: 500ms;
+    &:hover{
+        background-color: $color-pri;
+        color: $color-sec;
+    }
+}
