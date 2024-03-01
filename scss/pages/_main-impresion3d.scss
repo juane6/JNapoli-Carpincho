@@ -1,13 +1,11 @@
 /* IMPRESION 3D */
 
 .materiales{
-	@extend %flexwrap;  
+	@extend %flexwrap;
     padding-left: 10px;
 	padding-right: 10px;
     .material{
-        flex-direction: column;
-        flex-wrap: wrap;
-        width: 33%;
+        width: 32%;
         transition-duration: 500ms;
         padding: 10px;
         font-size: .8em;
@@ -17,10 +15,13 @@
         &:hover{
             box-shadow: 5px 5px 15px rgb(176, 176, 176);
         }
-        .ImgImpresion{
-            width: 100%;
+        .img-impresion{
+            width: fit-content;
             height: auto;
             display: inline-block;
+        }
+        p{
+            padding: 10px;
         }
     }
 }

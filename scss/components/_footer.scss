@@ -1,23 +1,28 @@
 /* FOOTER */
 
 footer{
+    @include flex(wrap, center, top);
 	background-color: $color-sec;
 	color: $color-pri;
 	height: auto;
-	width: 100%;
 	margin-top: 10px;
 	padding: 30px;
-	display: flex;
-	flex-wrap: wrap;
 	flex-direction: column;
-	align-items: center;
+    // COMENTADOS PORQUE LOS INCLUYO CON MIXIN FLEX
+    // width: 100%;
+	// display: flex;
+	// flex-wrap: wrap;
+	// align-items: center;
 }
 
-.RedesSociales{
+.redes-sociales{
 	width: 100%;
+    h4{
+        text-align: center;
+    }
     div{
         /* margin-bottom: 10px; */
-        display: inline-flex;
+        display: inline-block;
         width: 30%;
         padding: 10px;
         a{
@@ -41,7 +46,7 @@ footer{
 }
 
 .derechos{
-	width: 100%;
+    margin-top: 20px;
 	text-align: center;
 	font-size: .75em;
 }

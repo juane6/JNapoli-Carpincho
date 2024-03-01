@@ -1,0 +1,8 @@
+@mixin flex($wrap, $align-items, $justify-content){
+    display: flex;
+    width: 100%;
+    flex-wrap: $wrap;
+    align-items: $align-items;
+    column-gap: 20px;
+    justify-content: $justify-content;
+}

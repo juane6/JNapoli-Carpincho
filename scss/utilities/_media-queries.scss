@@ -1,32 +1,28 @@
 /* MEDIAQUERYS */
 
-/* DESKTOP */
-@media screen and (max-width: 1024px){
+/* ----------- TABLET ----------- */
 
-	/* FOOTER */
-	footer{
-		align-items: center;
-	}
-
-	.RedesSociales{
-        align-items: center;
-        div{
-            display: inline-block;
-            width: 100%;
-        }
-    }
-}
-
-/* TABLET */
 @media screen and (max-width: 1023px) and (min-width: 769px){
 
 	/* GRID RESPONSIVE */
 	.proyectos-grid{
 		grid-template-columns: repeat(2, 1fr);
-        .img1, .img2, .img3, .img4, .img5, .img6, .img7, .img8, .img9, .img10, .img11, .img12 {
-            grid-row: span 1;
-            grid-column: span 1;
-        }
+
+		.img-1x1{
+			grid-column: span 1;
+			grid-row: span 1;
+		}
+	
+		.img-1x2{
+			grid-column: span 1;
+			grid-row: span 1;
+		}
+	
+		.img-2x1{
+			grid-column: span 1;
+			grid-row: span 1;
+		}
+        
 	}
 
 	.home{
@@ -34,71 +30,121 @@
 	}
 
 	.proye{
-		grid-template-rows: repeat(6, 1fr);
+		grid-template-rows: repeat(8, 1fr);
 	}
-    
+
+	.proyectos-grid{
+		.titu{
+			display: none;
+		}
+	}
+	
     /* IMPRESION 3D */
-	.material{
-		width: 40%;
+	.materiales{
+		.material{
+			width: 48%;
+		}
 	}
-
+	
 	/* MODELADO 3D */
-
+	.modelado{
+		.pasos{
+			width: 48%;
+		}
+	}
 }
 
-/* MOBILE */
+/* ----------- MOBILE ----------- */
+
 @media screen and (max-width: 768px) {
 
 	h1 {
+		font-size: 3em;
+	}
+
+	h2{
 		font-size: 1.5em;
 	}
 
+	/* FOOTER */
+
+	.redes-sociales{
+        div{
+            display: block;
+            width: 100%;
+        }
+    }
+
 	/* CAROUSEL */	
 	
-	.carousel-tag {
-		display: block;
-		top: 10px;
-		left: 10px;
+	.banner{
+		.sele1{
+			// height: fit-content;
+			.formato-carousel{
+				height: fit-content;
+				.elemento{
+					.img{
+						display: block !important;
+					}
+					.carousel-tag{
+						transition: 500ms;
+						height: fit-content;
+						width: 100%;
+						position: relative;
+						display: block;
+						top: 0px;
+						left: 0px;
+					}
+				}
+			}
+		}
 	}
-
+	
 	.d-none {
 		display: block!important;
 	}
 
 	/* BANNERS PAG SECUNDARIAS IMAGEN FIJA */
 	.banner-sec{
-		.BannerTag{
+		.banner-tag{
 			position: static;
 			display: block;
 			width: 100%;
+			max-width: 100%;
 		}
 	}
 
 	/* GRID RESPONSIVE */
-	.proyectos-grid {
-		display: inline-block;
-	}
-
-	.ProyMin {
-		margin-bottom: 10px;
-	}
-
-	.materiales {
+	.proyectos-grid{
 		display: block;
-		width: 100%;
-		.material {
-			width: 100%;
+		.titu{
+			display: none;
 		}
 	}
 
-	
+	.proy-min{
+		margin-bottom: 10px;
+	}
+
+	.materiales{
+		display: block;
+		width: 100%;
+		.material{
+			width: 100%;
+			margin-top: 20px;
+		}
+	}
 
 	/* MODELADO3D */
 
 	.modelado{
 		display: block;
 		.pasos{
-		width: 100%;
+			width: 100%;
+			padding: 20px;
+			margin-bottom: 10px;
+			border-radius: 0px;
+			border-width: 0 0 1px 0;
 		}
 	}
 

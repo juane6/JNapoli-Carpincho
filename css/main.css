@@ -10,12 +10,17 @@
   font-family: Helvetica, Arial, sans-serif;
 }
 
-.materiales, .modelado, header {
+a {
+  text-decoration: none;
+}
+
+.materiales, header {
   display: flex;
-  justify-content: center;
-  column-gap: 10px;
   width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: top;
+  column-gap: 20px;
 }
 
 .formulario form select, .formulario form label {
@@ -26,7 +31,7 @@
 }
 
 .formulario form input[type=reset] {
-  background-color: #3c3c3c;
+  background-color: #2c2c2c;
   border-radius: 5px;
   padding: 5px;
   font-weight: bold;
@@ -35,7 +40,7 @@
 }
 .formulario form input[type=reset]:hover {
   background-color: #ffff00;
-  color: #3c3c3c;
+  color: #2c2c2c;
 }
 
 /* INSTALACION DE FUENTES UTILIZADAS */
@@ -48,13 +53,18 @@
   src: url(./../assets/fonts/HelveticaNeueLTStd-Md.otf);
 }
 /* GENERAL */
+html {
+  background-color: #fdfdfd;
+}
+
 body {
   margin: 0 auto;
   text-align: center;
-  color: #3c3c3c;
+  color: #2c2c2c;
   font-size: 16px;
   font-family: HelveticaNeueLT-Medium;
   max-width: 1200px;
+  background-color: white;
 }
 
 img {
@@ -65,51 +75,49 @@ img {
 /* TITULARES */
 h1 {
   font-family: HelveticaNeueLT-Bold;
-  font-size: 2em;
+  font-size: 4em;
   text-align: left;
   text-transform: uppercase;
-  border-bottom: 0.5px solid #3c3c3c;
+  border-bottom: 1px solid #2c2c2c;
   display: block;
   padding-left: 10px;
+  color: #2c2c2c;
+  width: 100%;
 }
 
 h2 {
-  font-size: 1.6em;
+  font-size: 2em;
   text-align: left;
   text-transform: uppercase;
   margin: 10px;
   font-family: HelveticaNeueLT-Bold;
   margin-top: 30px;
-  border-bottom: 0.5px solid #3c3c3c;
+  border-bottom: 1px solid #2c2c2c;
 }
 
 h3 {
-  font-size: 1em;
+  font-size: 1.25em;
   text-align: left;
-  margin-bottom: 10px;
   display: inline-block;
   color: #ffff00;
   font-family: HelveticaNeueLT-Bold;
 }
 
 h4 {
-  font-size: 0.8em;
+  font-size: 1em;
   font-family: HelveticaNeueLT-Bold;
-  margin-bottom: 5px;
   text-align: left;
-}
-
-h5 {
-  font-size: 2em;
-  text-align: left;
-  margin-bottom: 10px;
-  display: inline-block;
-  font-family: HelveticaNeueLT-Bold;
-  border-bottom: 0.5px solid #3c3c3c;
 }
 
 p {
   text-align: left;
+  margin: 0px;
+}
+
+strong {
+  color: #2c2c2c;
+  background-color: #ffff00;
+  padding: 5px;
 }
 
 /* BANNERS PAG SECUNDARIAS IMAGEN FIJA */
@@ -124,17 +132,26 @@ p {
   height: 300px;
   object-fit: cover;
 }
-.banner-sec .BannerTag {
+.banner-sec .banner-tag {
   position: absolute;
   display: inline-block;
   height: fit-content;
   width: fit-content;
   top: 15px;
   text-align: left;
-  color: #3c3c3c;
+  color: #2c2c2c;
   left: 15px;
+  right: 15px;
   padding: 10px;
   background-color: #ffff00;
+  border-radius: 5px;
+}
+.banner-sec .banner-tag p {
+  text-transform: uppercase;
+}
+
+.descripcion {
+  padding: 10px;
 }
 
 /* GRID INDEX Y PROYECTOS */
@@ -151,65 +168,62 @@ p {
   height: 100%;
   object-fit: cover;
 }
-.proyectos-grid .ProyMin {
-  /* border-radius: 40px; */
+.proyectos-grid .proy-min {
   transition: 500ms;
   position: relative;
+  background-color: #ffff00;
+  border: 5px;
+  overflow-wrap: break-word;
 }
-.proyectos-grid .ProyMin:hover {
-  box-shadow: 5px 5px 15px rgb(176, 176, 176);
+.proyectos-grid .proy-min:hover {
+  box-shadow: 5px 5px 15px rgb(150, 150, 150);
 }
-.proyectos-grid .ProyMin .ProyTag {
+.proyectos-grid .proy-min a .proy-titu {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #2c2c2c;
+}
+.proyectos-grid .proy-min a .proy-titu .proy-titu-text {
+  font-size: 2em;
+  line-height: 1em;
+  line-break: anywhere;
+  font-family: HelveticaNeueLT-Bold;
+  text-transform: uppercase;
+  word-break: break-all;
+}
+.proyectos-grid .proy-min .proy-tag {
   position: absolute;
   bottom: 0px;
   background-color: #ffff00;
   z-index: 1px;
   width: 100%;
   padding: 10px;
-  height: 50px;
 }
-.proyectos-grid .ProyMin .ProyTag h4 {
-  border-bottom: 0.5px solid #3c3c3c;
+.proyectos-grid .proy-min .proy-tag h4 {
+  border-bottom: 1px solid #2c2c2c;
 }
-.proyectos-grid .ProyMin .ProyTag .ProyTagText {
-  font-size: 0.65em;
+.proyectos-grid .proy-min .proy-tag .proy-tag-text {
+  font-size: 0.8em;
 }
-.proyectos-grid .img1 {
+.proyectos-grid .img-1x1 {
+  grid-column: span 1;
+  grid-row: span 1;
+}
+.proyectos-grid .img-1x2 {
+  grid-column: span 1;
   grid-row: span 2;
 }
-.proyectos-grid .img2 {
-  grid-row: span 1;
-}
-.proyectos-grid .img3 {
+.proyectos-grid .img-2x1 {
   grid-column: span 2;
-}
-.proyectos-grid .img4 {
-  grid-column: span 1;
   grid-row: span 1;
 }
-.proyectos-grid .img5 {
-  grid-row: span 1;
-}
-.proyectos-grid .img6 {
+.proyectos-grid .titu {
   grid-column: span 1;
-}
-.proyectos-grid .img7 {
-  grid-column: span 2;
-}
-.proyectos-grid .img8 {
-  grid-row: span 2;
-}
-.proyectos-grid .img9 {
   grid-row: span 1;
-}
-.proyectos-grid .img10 {
-  grid-row: span 1;
-}
-.proyectos-grid .img11 {
-  grid-column: span 1;
-}
-.proyectos-grid .img12 {
-  grid-column: span 1;
 }
 
 header {
@@ -217,6 +231,7 @@ header {
   align-items: center;
 }
 header nav ul li {
+  color: #2c2c2c;
   transition-duration: 500ms;
 }
 header nav ul li:hover {
@@ -229,6 +244,7 @@ header nav ul li:active {
   font-weight: 900;
 }
 header nav ul li .active {
+  color: #2c2c2c;
   background-color: #ffff00;
   border-radius: 5px;
   font-weight: 900;
@@ -246,28 +262,33 @@ header nav ul li .active {
 
 /* FOOTER */
 footer {
-  background-color: #3c3c3c;
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  align-items: center;
+  column-gap: 20px;
+  justify-content: top;
+  background-color: #2c2c2c;
   color: #ffff00;
   height: auto;
-  width: 100%;
   margin-top: 10px;
   padding: 30px;
-  display: flex;
-  flex-wrap: wrap;
   flex-direction: column;
-  align-items: center;
 }
 
-.RedesSociales {
+.redes-sociales {
   width: 100%;
 }
-.RedesSociales div {
+.redes-sociales h4 {
+  text-align: center;
+}
+.redes-sociales div {
   /* margin-bottom: 10px; */
-  display: inline-flex;
+  display: inline-block;
   width: 30%;
   padding: 10px;
 }
-.RedesSociales div a {
+.redes-sociales div a {
   font-size: 0.75em;
   color: #ffff00;
   transition-duration: 500ms;
@@ -276,17 +297,17 @@ footer {
   text-transform: uppercase;
   text-decoration: none;
 }
-.RedesSociales div a img {
+.redes-sociales div a img {
   width: 30px;
 }
-.RedesSociales div a:hover {
-  color: #3c3c3c;
+.redes-sociales div a:hover {
+  color: #2c2c2c;
   background-color: #ffff00;
   border-radius: 5px;
 }
 
 .derechos {
-  width: 100%;
+  margin-top: 20px;
   text-align: center;
   font-size: 0.75em;
 }
@@ -299,53 +320,61 @@ footer {
   background-color: #ffff00;
 }
 .banner .sele1 .formato-carousel {
-  height: 300px;
+  height: 400px;
   justify-content: center;
   align-items: center;
 }
 .banner .sele1 .formato-carousel .elemento img {
-  height: 300px;
+  height: 400px;
   object-fit: cover;
 }
 .banner .sele1 .formato-carousel .elemento .carousel-tag {
-  display: inline-block;
   width: fit-content;
-  height: 150px;
+  height: fit-content;
   text-align: left;
   top: 15px;
   left: 15px;
-  color: #3c3c3c;
+  color: #2c2c2c;
   background-color: #ffff00;
   padding: 10px;
+}
+.banner .sele1 .formato-carousel .elemento .carousel-tag p {
+  text-transform: uppercase;
 }
 
 /* PROYECTOS MINIATURA */
 .home {
-  grid-template-rows: repeat(2, 200px);
+  grid-template-rows: repeat(3, 200px);
 }
 
-/* MODELADO3D E IMPRESION3D */
+/* MODELADO3D */
 .modelado {
-  padding-left: 10px;
-  padding-right: 10px;
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  align-items: top;
+  column-gap: 20px;
+  justify-content: center;
+  gap: 10px;
 }
 .modelado .pasos {
-  width: 33%;
+  width: 30%;
   height: auto;
+  padding: 15px;
   border-style: solid;
-  border-color: #3c3c3c;
+  border-color: #2c2c2c;
   border-width: 1px;
   border-radius: 5px;
-  padding-left: 15px;
-  padding-right: 15px;
   transition-duration: 500ms;
 }
-.modelado .pasos .ImgModelado {
-  width: 100%;
+.modelado .pasos .img-modelado {
+  width: fit-content;
   height: auto;
+  display: inline-block;
 }
 .modelado .pasos div h3 {
-  background-color: #3c3c3c;
+  margin-top: 10px;
+  background-color: #2c2c2c;
   padding: 10px;
   border-radius: 5px;
   display: block;
@@ -358,9 +387,7 @@ footer {
   padding-right: 10px;
 }
 .materiales .material {
-  flex-direction: column;
-  flex-wrap: wrap;
-  width: 33%;
+  width: 32%;
   transition-duration: 500ms;
   padding: 10px;
   font-size: 0.8em;
@@ -371,15 +398,18 @@ footer {
 .materiales .material:hover {
   box-shadow: 5px 5px 15px rgb(176, 176, 176);
 }
-.materiales .material .ImgImpresion {
-  width: 100%;
+.materiales .material .img-impresion {
+  width: fit-content;
   height: auto;
   display: inline-block;
+}
+.materiales .material p {
+  padding: 10px;
 }
 
 /* PROYECTOS MINIATURA */
 .proye {
-  grid-template-rows: repeat(4, 200px);
+  grid-template-rows: repeat(6, 200px);
 }
 
 /* CONTACTO. Formularios */
@@ -404,9 +434,10 @@ footer {
   text-align: left;
   margin: 10px;
   width: 300px;
+  border-bottom: 1px solid #2c2c2c;
 }
 .formulario form input[type=submit] {
-  background-color: #3c3c3c;
+  background-color: #2c2c2c;
   border-radius: 5px;
   padding: 5px;
   font-weight: bold;
@@ -415,70 +446,92 @@ footer {
 }
 .formulario form input[type=submit]:hover {
   background-color: #ffff00;
-  color: #3c3c3c;
+  color: #2c2c2c;
 }
 /* MEDIAQUERYS */
-/* DESKTOP */
-@media screen and (max-width: 1024px) {
-  /* FOOTER */
-  footer {
-    align-items: center;
-  }
-  .RedesSociales {
-    align-items: center;
-  }
-  .RedesSociales div {
-    display: inline-block;
-    width: 100%;
-  }
-}
-/* TABLET */
+/* ----------- TABLET ----------- */
 @media screen and (max-width: 1023px) and (min-width: 769px) {
   /* GRID RESPONSIVE */
   .proyectos-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-  .proyectos-grid .img1, .proyectos-grid .img2, .proyectos-grid .img3, .proyectos-grid .img4, .proyectos-grid .img5, .proyectos-grid .img6, .proyectos-grid .img7, .proyectos-grid .img8, .proyectos-grid .img9, .proyectos-grid .img10, .proyectos-grid .img11, .proyectos-grid .img12 {
-    grid-row: span 1;
+  .proyectos-grid .img-1x1 {
     grid-column: span 1;
+    grid-row: span 1;
+  }
+  .proyectos-grid .img-1x2 {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+  .proyectos-grid .img-2x1 {
+    grid-column: span 1;
+    grid-row: span 1;
   }
   .home {
     grid-template-rows: repeat(3, 1fr);
   }
   .proye {
-    grid-template-rows: repeat(6, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+  }
+  .proyectos-grid .titu {
+    display: none;
   }
   /* IMPRESION 3D */
-  .material {
-    width: 40%;
+  .materiales .material {
+    width: 48%;
   }
   /* MODELADO 3D */
+  .modelado .pasos {
+    width: 48%;
+  }
 }
-/* MOBILE */
+/* ----------- MOBILE ----------- */
 @media screen and (max-width: 768px) {
   h1 {
+    font-size: 3em;
+  }
+  h2 {
     font-size: 1.5em;
   }
-  /* CAROUSEL */
-  .carousel-tag {
+  /* FOOTER */
+  .redes-sociales div {
     display: block;
-    top: 10px;
-    left: 10px;
+    width: 100%;
+  }
+  /* CAROUSEL */
+  .banner .sele1 .formato-carousel {
+    height: fit-content;
+  }
+  .banner .sele1 .formato-carousel .elemento .img {
+    display: block !important;
+  }
+  .banner .sele1 .formato-carousel .elemento .carousel-tag {
+    transition: 500ms;
+    height: fit-content;
+    width: 100%;
+    position: relative;
+    display: block;
+    top: 0px;
+    left: 0px;
   }
   .d-none {
     display: block !important;
   }
   /* BANNERS PAG SECUNDARIAS IMAGEN FIJA */
-  .banner-sec .BannerTag {
+  .banner-sec .banner-tag {
     position: static;
     display: block;
     width: 100%;
+    max-width: 100%;
   }
   /* GRID RESPONSIVE */
   .proyectos-grid {
-    display: inline-block;
+    display: block;
   }
-  .ProyMin {
+  .proyectos-grid .titu {
+    display: none;
+  }
+  .proy-min {
     margin-bottom: 10px;
   }
   .materiales {
@@ -487,6 +540,7 @@ footer {
   }
   .materiales .material {
     width: 100%;
+    margin-top: 20px;
   }
   /* MODELADO3D */
   .modelado {
@@ -494,6 +548,10 @@ footer {
   }
   .modelado .pasos {
     width: 100%;
+    padding: 20px;
+    margin-bottom: 10px;
+    border-radius: 0px;
+    border-width: 0 0 1px 0;
   }
   /* FORMULARIO RESPONSIVE */
   .img-formulario {

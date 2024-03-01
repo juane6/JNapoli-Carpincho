@@ -1,9 +1,10 @@
 %flexwrap{
     display: flex;
-	justify-content: center;
-	column-gap: 10px;
     width: 100%;
-    align-items: top;  
+    flex-wrap: wrap;
+	justify-content: center;
+    align-items: top;
+	column-gap: 20px;
 }
 
 %form-input{

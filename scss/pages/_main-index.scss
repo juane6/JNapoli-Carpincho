@@ -6,24 +6,26 @@
 			background-color: $color-pri;	
 		}
 		.formato-carousel{
-			height: 300px;
+			height: 400px;
 			justify-content: center;
 			align-items: center;
 			.elemento{
 				img{
-				height: 300px;
+				height: 400px;
 				object-fit: cover;
 				}
 				.carousel-tag{
-					display: inline-block;
 					width: fit-content;
-					height: 150px;
+					height: fit-content;
 					text-align: left;
 					top: 15px;
 					left: 15px;
 					color: $color-sec;
 					background-color: $color-pri;
 					padding: 10px;
+					p{
+						text-transform: uppercase;
+					}
 				}
 			}
 		}
@@ -32,5 +34,5 @@
 
 /* PROYECTOS MINIATURA */
 .home{
-	grid-template-rows: repeat(2, 200px);
+	grid-template-rows: repeat(3, 200px);
 }
